@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Location.delete_all
+User.delete_all
 
 sf = Location.create(city: 'San Francisco', longitude: -122.4194, latitude: 37.7749)
 seattle = Location.create(city: 'Seattle', longitude: -122.3351, latitude: 47.6080)
+
+juan = User.create(username: 'thejuanandonly', password: '123', email: 'juan@yahoo.com')
