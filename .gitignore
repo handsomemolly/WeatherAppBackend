@@ -29,4 +29,5 @@
 # Ignore API key when pushing to github
 APIkey2.rb
 
+.env
 
