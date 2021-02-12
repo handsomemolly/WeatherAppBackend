@@ -1,5 +1,6 @@
 class UserLocationsController < ApplicationController
     def show
+        byebug
         user_location = UserLocation.find_by(id: params[:id])
         render json: user_location
     end
@@ -20,6 +21,20 @@ class UserLocationsController < ApplicationController
         user_location.destroy
         render json: user_location
     end
+
+    
+
+
+
+        # @@location = Location.all.find_by(longitude: , latitude: )
+
+    # @@url = URI("https://api.openweathermap.org/data/2.5/onecall?lat='#{@location.latitude}'&lon=#{@location.longitude}&exclude={part}&appid=bfb0f9ce0f1c23abb82d4e2a43fba953")
+    
+    def render_request
+        response = UserLocation.get_request
+        render json: {lmao: response}
+    end
+    
 
 
     private
