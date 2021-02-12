@@ -27,5 +27,6 @@
 /config/master.key
 
 # Ignore API key when pushing to github
-APIkey.rb
+APIkey2.rb
+
 
