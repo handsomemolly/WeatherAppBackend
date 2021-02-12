@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Location.delete_all
+
+sf = Location.create(city: 'San Francisco', longitude: -122.4194, latitude: 37.7749)
+seattle = Location.create(city: 'Seattle', longitude: -122.3351, latitude: 47.6080)

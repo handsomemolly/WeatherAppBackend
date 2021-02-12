@@ -4,7 +4,7 @@ require 'json'
 
 class MakeRequest < ActiveRecord::Base
 
-    # @@location = Location.all.find{}
+    # @@location = Location.all.find_by(longitude: , latitude: )
 
     # @@url = URI("https://api.openweathermap.org/data/2.5/onecall?lat='#{@location.latitude}'&lon=#{@location.longitude}&exclude={part}&appid=bfb0f9ce0f1c23abb82d4e2a43fba953")
     URL = "https://api.openweathermap.org/data/2.5/onecall?lat=37.7749&lon=-122.4194&units=imperial&exclude={part}&appid=bfb0f9ce0f1c23abb82d4e2a43fba953"
