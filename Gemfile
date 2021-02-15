@@ -43,3 +43,5 @@ gem 'net-http'
 gem 'open-uri'
 gem 'json'
 gem 'rest-client'
+gem 'dotenv-rails'
+
