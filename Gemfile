@@ -44,4 +44,5 @@ gem 'open-uri'
 gem 'json'
 gem 'rest-client'
 gem 'dotenv-rails'
+gem 'geocoder'
 
