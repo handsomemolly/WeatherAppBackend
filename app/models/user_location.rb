@@ -9,4 +9,12 @@ class UserLocation < ApplicationRecord
     url = "https://api.openweathermap.org/data/2.5/onecall?lat=37.7749&lon=-122.4194&units=imperial&exclude={part}&appid=#{api}"
     JSON.parse(RestClient.get(url))
   end
+
+  # def self.get_request(location)
+  #   api = ENV["WEATHER_API_KEY"]
+  #   url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{location.latitude}&lon=-#{location.longitude}&units=imperial&exclude={part}&appid=#{api}"
+  #   JSON.parse(RestClient.get(url))
+  # end
 end
+
+

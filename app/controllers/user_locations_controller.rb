@@ -1,4 +1,10 @@
 class UserLocationsController < ApplicationController
+    def index
+        user_locations = UserLocation.all
+        render json: user_locations
+    end
+    
+    
     def show
         byebug
         user_location = UserLocation.find_by(id: params[:id])
