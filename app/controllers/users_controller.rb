@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
     def index
-        users = User.all 
+        users = User.all
         render json: users
     end
 
-    def show 
+    def show
         user = User.find_by(id: params[:id])
         render json: user
     end
@@ -14,6 +14,10 @@ class UsersController < ApplicationController
         render json: user
     end
 
+    def login
+      user = User.find_by(username: user_params[:username], password: user_params[:password])
+      render json: user
+    end
 
     private
 
@@ -23,5 +27,5 @@ class UsersController < ApplicationController
 
 
 
-    
+
 end
