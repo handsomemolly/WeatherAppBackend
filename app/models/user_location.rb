@@ -18,5 +18,3 @@ class UserLocation < ApplicationRecord
   #   JSON.parse(RestClient.get(url))
   # end
 end
-
-

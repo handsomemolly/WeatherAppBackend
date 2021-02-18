@@ -14,6 +14,19 @@ class UsersController < ApplicationController
         render json: user
     end
 
+    def update
+      
+        user = User.find_by(id: params[:id])
+        user.update(email: user_params[:email], username: user_params[:username], password: user_params[:password])
+        render json: user
+    end
+
+    def destroy
+      user = User.find_by(id: params[:id])
+      user.destroy
+
+    end
+
     def login
       user = User.find_by(username: user_params[:username], password: user_params[:password])
       render json: user
