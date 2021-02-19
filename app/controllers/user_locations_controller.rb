@@ -6,7 +6,6 @@ class UserLocationsController < ApplicationController
     
     
     def show
-        byebug
         user_location = UserLocation.find_by(id: params[:id])
         render json: user_location
     end
@@ -23,9 +22,9 @@ class UserLocationsController < ApplicationController
     end
 
     def destroy
+        l = Location.find(params[:id])
         user_location = UserLocation.find_by(id: params[:id])
         user_location.destroy
-        render json: user_location
     end
 
     def render_request
